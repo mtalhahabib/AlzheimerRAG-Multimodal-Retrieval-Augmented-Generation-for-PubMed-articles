@@ -3,6 +3,7 @@ from PIL import Image
 import base64
 from claudeRag import AlzheimerRAG
 from claudeRag import PubMedFetcher
+from ragApp import RagApp
 
 # Set up page configuration
 st.set_page_config(
@@ -234,7 +235,7 @@ if __name__ == "__main__":
         set_background("background.jpg")
         if 'rag_system' not in st.session_state:
             with st.spinner("Loading knowledge base..."):
-                st.session_state.rag_system = AlzheimerRAG()
+                st.session_state.rag_system = RagApp()
         create_web_interface(st.session_state.rag_system)
     except Exception as e:
         st.error(f"Initialization Failed: {str(e)}")

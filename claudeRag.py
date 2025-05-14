@@ -17,33 +17,33 @@ from typing import List, Dict, Any, Tuple, Optional
 from dataclasses import dataclass
 from PIL import Image
 from io import BytesIO
-# from openai import OpenAI
+from openai import OpenAI
 # For text processing
-# import nltk
-# from nltk.tokenize import sent_tokenize
-# import PyPDF2
+import nltk
+from nltk.tokenize import sent_tokenize
+import PyPDF2
 
 # For vector database
-# import chromadb
-# from chromadb.utils import embedding_functions
+import chromadb
+from chromadb.utils import embedding_functions
 
 # For embeddings and LLM
-# import torch
+import torch
 # from transformers import AutoTokenizer, AutoModel, pipeline
-# from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer
 from PIL import Image
 # import clip
 
 # For multimodal embeddings
-# import torch
-# import clip
-# import nltk
-# from chromadb.errors import IDAlreadyExistsError
+import torch
+import clip
+import nltk
+from chromadb.errors import IDAlreadyExistsError
 # Download required NLTK resources
-# nltk.download('punkt')
-# nltk.download('stopwords')  # Often needed for text processing
-# nltk.download('wordnet')   # Sometimes required depending on processing
-# nltk.download('punkt_tab') # Specific tab tokenization models
+nltk.download('punkt')
+nltk.download('stopwords')  # Often needed for text processing
+nltk.download('wordnet')   # Sometimes required depending on processing
+nltk.download('punkt_tab') # Specific tab tokenization models
 
 # # Now add this to handle tab characters in abstracts
 # nltk.download('popular')   # General safety for common resources
