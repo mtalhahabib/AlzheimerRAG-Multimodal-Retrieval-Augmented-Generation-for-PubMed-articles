@@ -1,0 +1,8 @@
+Title: Diagnostic and Prognostic Biomarkers of Idiopathic Normal Pressure Hydrocephalus in Cerebrospinal Fluid and Blood.
+
+Authors: 
+Journal: <ISSN IssnType="Electronic">1558-1349</ISSN><JournalIssue CitedMedium="Internet"><Volume>36</Volume><Issue>2</Issue><PubDate><Year>2025</Year><Month>Apr</Month></PubDate></JournalIssue><Title>Neurosurgery clinics of North America</Title><ISOAbbreviation>Neurosurg Clin N Am</ISOAbbreviation>
+Date: <Year>2025</Year><Month>Apr</Month>
+
+Abstract:
+Idiopathic normal pressure hydrocephalus (iNPH) is a treatable condition marked by gait disturbances, cognitive decline, and urinary incontinence. Biomarkers play a crucial role in distinguishing iNPH from Alzheimer's disease (AD) and predicting shunt surgery outcomes. A&#x3b2;1-42, A&#x3b2;1-40, t-tau, and p-tau181 differentiate iNPH from AD, with iNPH showing a higher A&#x3b2;1-42/A&#x3b2;1-40 ratio and normal tau levels. Neurofilament light chain and soluble amyloid precursor protein derivatives provide prognostic insights with lower preoperative levels linked to better surgical outcomes. Elevated LRG-1 and MCP-1 in cerebrospinal fluid aid in diagnosis and predict favorable responses to shunt surgery, enhancing clinical decision making and patient care.Copyright &#xa9; 2024 Elsevier Inc. All rights reserved.

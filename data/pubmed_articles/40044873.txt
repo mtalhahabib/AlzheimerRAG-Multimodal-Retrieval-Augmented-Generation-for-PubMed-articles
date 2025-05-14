@@ -1,0 +1,8 @@
+Title: Optical signature of retinal Tau fibrillation.
+
+Authors: 
+Journal: <ISSN IssnType="Electronic">2045-2322</ISSN><JournalIssue CitedMedium="Internet"><Volume>15</Volume><Issue>1</Issue><PubDate><Year>2025</Year><Month>Mar</Month><Day>06</Day></PubDate></JournalIssue><Title>Scientific reports</Title><ISOAbbreviation>Sci Rep</ISOAbbreviation>
+Date: <Year>2025</Year><Month>Mar</Month><Day>06</Day>
+
+Abstract:
+Fibrillated Tau proteins are believed to be a signature of Alzheimer's disease (AD) and may be potentially employed as a biosensor for AD early detection. Several studies revealed the presence of Tau accumulation and aggregation in the retina, similar to that observed in the brains of individuals with AD. These retinal changes can be non-invasively visualised through AD-related scores derived from reflectance measurements of the patient fundus. However, a direct link with the optical properties of fibrillated protein clusters is still lacking. Here, we present a new optical technique which measures the scattering optical properties of protein fibrils. Our experimental findings show that the scattering intensity of Tau has a wavelength dependence correlated to their size. The optical signal qualitatively replicates the spectral signature observed in human AD patient retinas. Our paper shows that the Tau protein spectral signature is compatible with the distinctive spectral signature of the AD, further confirming that retinal investigation is a promising tool.&#xa9; 2025. The Author(s).

@@ -1,0 +1,8 @@
+Title: [Neurobiological potential of astragaloside IV and prospects for its use in the treatment of Alzheimer's disease].
+
+Authors: 
+Journal: <ISSN IssnType="Print">1997-7298</ISSN><JournalIssue CitedMedium="Print"><Volume>125</Volume><Issue>2</Issue><PubDate><Year>2025</Year></PubDate></JournalIssue><Title>Zhurnal nevrologii i psikhiatrii imeni S.S. Korsakova</Title><ISOAbbreviation>Zh Nevrol Psikhiatr Im S S Korsakova</ISOAbbreviation>
+Date: <Year>2025</Year>
+
+Abstract:
+The review presents an analysis of experimental data on the study of the neurobiological effects of astragaloside IV, which can be used in the treatment of Alzheimer's disease. Astragaloside IV is a cycloartan triterpene saponin, which is found in the roots of membranous milk vetch (Astragalus membranaceus (Fisch. ex Link) Bunge) and has a very wide range of pharmacological activity. In recent years, this compound has attracted attention due to its diverse neurobiological effects. Studies have shown the ability of astragaloside IV to modulate microglial activity. The protective effect of this saponin on neurons from the effects of glutamate-induced neurotoxicity has been demonstrated. In PC12 cells, astragaloside IV is shown to be able to resolve various types of mitochondrial dysfunction and inhibit endoplasmic reticulum stress. This compound is also a PPAR&#x3b3; agonist. In vivo experiments have shown that the test substance effectively protects synapses as well as improves cognitive functions, including memory and learning. It is concluded that astragaloside IV, apparently, may be used in the future as a multi-purpose complex therapy for Alzheimer's disease.

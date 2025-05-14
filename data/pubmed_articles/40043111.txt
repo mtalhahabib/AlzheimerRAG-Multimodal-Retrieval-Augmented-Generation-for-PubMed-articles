@@ -1,0 +1,8 @@
+Title: Sex differences in age-associated neurological diseases-A roadmap for reliable and high-yield research.
+
+Authors: 
+Journal: <ISSN IssnType="Electronic">2375-2548</ISSN><JournalIssue CitedMedium="Internet"><Volume>11</Volume><Issue>10</Issue><PubDate><Year>2025</Year><Month>Mar</Month><Day>07</Day></PubDate></JournalIssue><Title>Science advances</Title><ISOAbbreviation>Sci Adv</ISOAbbreviation>
+Date: <Year>2025</Year><Month>Mar</Month><Day>07</Day>
+
+Abstract:
+Once taken into consideration, sex differences in neurological diseases emerge in abundance: (i) Stroke severity is significantly higher in females than in males, (ii) Alzheimer's disease (AD) pathology is more pronounced in females, and (iii) conspicuous links with hormonal cycles led to female-specific diagnoses, such as catamenial migraines and epilepsy. While these differences receive increasing attention in isolation, they likely link to similar processes in the brain. Hence, this review aims to present an overview of the influences of sex chromosomes, hormones, and aging on male and female brains across health and disease, with a particular focus on AD and stroke. The focus here on advancements across several fields holds promise to fuel future research and to lead to an enriched understanding of the brain and more effective personalized neurologic care for all.

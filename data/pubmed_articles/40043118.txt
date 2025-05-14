@@ -1,0 +1,8 @@
+Title: The interplay between age at menopause and synaptic integrity on Alzheimer's disease risk in women.
+
+Authors: 
+Journal: <ISSN IssnType="Electronic">2375-2548</ISSN><JournalIssue CitedMedium="Internet"><Volume>11</Volume><Issue>10</Issue><PubDate><Year>2025</Year><Month>Mar</Month><Day>07</Day></PubDate></JournalIssue><Title>Science advances</Title><ISOAbbreviation>Sci Adv</ISOAbbreviation>
+Date: <Year>2025</Year><Month>Mar</Month><Day>07</Day>
+
+Abstract:
+Menopause is a major biological transition that may influence women's late-life brain health. Earlier estrogen depletion-via earlier menopause-has been associated with increased risk for Alzheimer's disease (AD). Synaptic dysfunction also incites and exacerbates AD progression. We investigated whether age at menopause and synaptic health together influence AD neuropathology and cognitive trajectories using clinical and autopsy data from 268 female decedents in the Rush Memory and Aging Project. We observed significant interactions between age at menopause and synaptic integrity on cognitive decline and tau tangles, such that earlier menopause strengthened the associations of reduced synaptic integrity with faster cognitive decline and elevated tau. Exploratory analyses showed that these relationships were attenuated in women who took menopausal hormone therapy. These findings suggest that midlife endocrine processes or their sequalae may influence synaptic vulnerability to AD. Interventions addressing both hormonal factors and synaptic health could enhance resilience to dementia in women.

@@ -1,0 +1,8 @@
+Title: Carbon ion stimulation therapy reverses iron deposits and microglia driven neuroinflammation and induces cognitive improvement in an Alzheimer's disease mouse model.
+
+Authors: 
+Journal: <ISSN IssnType="Electronic">2045-2322</ISSN><JournalIssue CitedMedium="Internet"><Volume>15</Volume><Issue>1</Issue><PubDate><Year>2025</Year><Month>Mar</Month><Day>07</Day></PubDate></JournalIssue><Title>Scientific reports</Title><ISOAbbreviation>Sci Rep</ISOAbbreviation>
+Date: <Year>2025</Year><Month>Mar</Month><Day>07</Day>
+
+Abstract:
+Insoluble iron deposits often exist as iron oxide nanoparticles in protein aggregates, impaired ferritin, or activated microglia and have been implicated as major causes of neuroinflammation in Alzheimer's disease. However, no crucial evidence has been reported to support the therapeutic effects of current iron chelators on the deposition of various molecular forms of insoluble iron. We investigated the therapeutic effect of carbon ion stimulation (CIS) via a transmission beam on insoluble iron deposits, iron inclusion bodies, and the associated biological response in 5xFAD AD mouse brains. Compared with no treatment, CIS dose-dependently induced a 33-60% reduction in the amount of ferrous-containing iron species and associated inclusion bodies in the brains of AD mice. CIS induced considerable neuroinflammation downregulation and, conversely, anti-inflammatory upregulation, which was associated with improved memory and enhanced hippocampal neurogenesis. In conclusion, our results suggest that the effective degradation of insoluble iron deposits in combination with pathogenic inclusion bodies promotes AD-modifying properties and offers a potential CIS treatment option for AD.&#xa9; 2025. The Author(s).

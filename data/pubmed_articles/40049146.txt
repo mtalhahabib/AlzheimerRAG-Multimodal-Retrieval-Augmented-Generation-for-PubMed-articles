@@ -1,0 +1,8 @@
+Title: New mechanisms highlight the complex relationship of Apolipoprotein E and tau pathogenesis.
+
+Authors: 
+Journal: <ISSN IssnType="Electronic">1097-4199</ISSN><JournalIssue CitedMedium="Internet"><Volume>113</Volume><Issue>5</Issue><PubDate><Year>2025</Year><Month>Mar</Month><Day>05</Day></PubDate></JournalIssue><Title>Neuron</Title><ISOAbbreviation>Neuron</ISOAbbreviation>
+Date: <Year>2025</Year><Month>Mar</Month><Day>05</Day>
+
+Abstract:
+A rare variant of Apolipoprotein E3 with neuroprotective properties has been identified in autosomal-dominant Alzheimer's disease. In this issue of Neuron, Chen et&#xa0;al.1 show that direct interaction between this variant and tau blocks tau pathogenesis in rodent models.Copyright &#xa9; 2025 Elsevier Inc. All rights reserved.

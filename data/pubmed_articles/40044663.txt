@@ -1,0 +1,8 @@
+Title: Phosphorylated tau 181 and 217 are elevated in serum and muscle of patients with amyotrophic lateral sclerosis.
+
+Authors: 
+Journal: <ISSN IssnType="Electronic">2041-1723</ISSN><JournalIssue CitedMedium="Internet"><Volume>16</Volume><Issue>1</Issue><PubDate><Year>2025</Year><Month>Mar</Month><Day>05</Day></PubDate></JournalIssue><Title>Nature communications</Title><ISOAbbreviation>Nat Commun</ISOAbbreviation>
+Date: <Year>2025</Year><Month>Mar</Month><Day>05</Day>
+
+Abstract:
+Blood phosphorylated (p)-tau 181 and p-tau 217 have been proposed as accurate biomarkers of Alzheimer's disease (AD) pathology. However, blood p-tau 181 is also elevated in amyotrophic lateral sclerosis (ALS) without a clearly identified source. We measured serum p-tau 181 and p-tau 217 in a multicentre cohort of ALS (n&#x2009;=&#x2009;152), AD (n&#x2009;=&#x2009;111) cases and disease controls (n&#x2009;=&#x2009;99) recruited from four different centres. Further, we investigated the existence of both p-tau species using immunohistochemistry (IHC) and mass spectrometry (MS)&#xa0;in muscle biopsies of ALS cases (IHC: n&#x2009;=&#x2009;13, MS: n&#x2009;=&#x2009;5) and disease controls (IHC: n&#x2009;=&#x2009;14, MS: n&#x2009;=&#x2009;5) from one cohort. Serum p-tau 181 and p-tau 217 were higher in AD and ALS patients compared to disease controls. IHC and MS analyses revealed the presence of p-tau 181 and 217 in muscle biopsies from both ALS cases and disease controls, with ALS samples showing increased p-tau reactivity in atrophic muscle fibres. Blood p-tau species could potentially be used to diagnose both ALS and AD.&#xa9; 2025. The Author(s).

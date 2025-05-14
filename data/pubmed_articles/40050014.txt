@@ -1,0 +1,8 @@
+Title: Brain Signatures of Very Early Cognitive Decline in Asymptomatic Middle-Aged Offspring of People With Alzheimer's Disease.
+
+Authors: 
+Journal: <ISSN IssnType="Electronic">1099-1166</ISSN><JournalIssue CitedMedium="Internet"><Volume>40</Volume><Issue>3</Issue><PubDate><Year>2025</Year><Month>Mar</Month></PubDate></JournalIssue><Title>International journal of geriatric psychiatry</Title><ISOAbbreviation>Int J Geriatr Psychiatry</ISOAbbreviation>
+Date: <Year>2025</Year><Month>Mar</Month>
+
+Abstract:
+To assess the relationship of subtle preclinical cognitive changes with white matter microstructure and cortical volume in middle-aged adults at high AD risk due to a parental history.Participants (n&#xa0;=&#xa0;278) were AD patients' offspring from the Israel Registry for Alzheimer's Prevention study. Cognitively unimpaired-decliners (CU-D) were based on a linear regression model. In a subsample with MRI (n&#xa0;=&#xa0;220), we examined relationships of CU-D with white matter (WM) microstructure (fractional anisotropy [FA] and mean diffusivity [MD]) and cortical volume in brain regions commonly affected in AD.CU-D participants had lower FA in the superior longitudinal fasciculus (SLF) (p&#xa0;=&#xa0;&lt;&#xa0;0.001) and higher MD in the SLF (p&#xa0;=&#xa0;&lt;&#xa0;0.001), and cingulum adjacent to the corpus callosum (p&#xa0;=&#xa0;&lt;&#xa0;0.001) and genu (p&#xa0;=&#xa0;0.006) compared to cognitively unimpaired-stable (CU-S) participants. The groups did not differ in cortical brain volumes.CU-D participants had poorer WM microstructure in brain tracts affected early in AD. Early interventions can target individuals that fit the CU-D criteria.&#xa9; 2025 John Wiley &amp; Sons Ltd.
