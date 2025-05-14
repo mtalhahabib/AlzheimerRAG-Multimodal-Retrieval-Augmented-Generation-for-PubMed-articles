@@ -2,11 +2,11 @@
 import os
 import re
 import json
-from huggingface_hub import InferenceClient
+# from huggingface_hub import InferenceClient
 import shutil
-from huggingface_hub import login
+# from huggingface_hub import login
 
-login("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") 
+# login("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") 
 
 import time
 import requests
@@ -716,9 +716,9 @@ class AlzheimerRAG:
             do_sample=True,  # Add this to enable temperature
             top_p=0.9        # Add nucleus sampling
         )
-        if Config.FALLBACK_LLM_API == "meta-llama":
-            # self.meta_client = OpenAI(api_key=Config.OPENAI_API_KEY)
-            self.meta_client = InferenceClient(model='meta-llama/Meta-Llama-3-8B-Instruct', api_key='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')
+        # if Config.FALLBACK_LLM_API == "meta-llama":
+        #     # self.meta_client = OpenAI(api_key=Config.OPENAI_API_KEY)
+        #     self.meta_client = InferenceClient(model='meta-llama/Meta-Llama-3-8B-Instruct', api_key='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')
 
     def generate(self, query: str, retrieval_results: QueryResult) -> str:
         # Construct context with proper T5 formatting
