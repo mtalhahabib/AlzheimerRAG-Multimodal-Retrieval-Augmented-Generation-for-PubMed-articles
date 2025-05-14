@@ -29,7 +29,7 @@ from io import BytesIO
 
 # For embeddings and LLM
 # import torch
-from transformers import AutoTokenizer, AutoModel, pipeline
+# from transformers import AutoTokenizer, AutoModel, pipeline
 # from sentence_transformers import SentenceTransformer
 from PIL import Image
 # import clip
