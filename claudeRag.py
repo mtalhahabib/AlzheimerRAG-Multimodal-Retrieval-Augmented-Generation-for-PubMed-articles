@@ -17,7 +17,7 @@ from typing import List, Dict, Any, Tuple, Optional
 from dataclasses import dataclass
 from PIL import Image
 from io import BytesIO
-from openai import OpenAI
+# from openai import OpenAI
 # For text processing
 import nltk
 from nltk.tokenize import sent_tokenize
