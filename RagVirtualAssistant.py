@@ -2,11 +2,20 @@
 import os
 import re
 import json
+from dotenv import load_dotenv
 # from huggingface_hub import InferenceClient
 import shutil
 # from huggingface_hub import login
 
-# login("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") 
+# Load environment variables
+load_dotenv()
+
+# Get API keys from environment variables
+HUGGINGFACE_API_KEY = os.getenv('HUGGINGFACE_API_KEY')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+PUBMED_API_KEY = os.getenv('PUBMED_API_KEY')
+
+# login(HUGGINGFACE_API_KEY) 
 
 import time
 import requests
@@ -98,8 +107,7 @@ class Config:
     CHUNK_OVERLAP = 50
     TOP_K_RESULTS = 5
     FALLBACK_LLM_API = "meta-llama"  # "openai" or "google"
-    OPENAI_API_KEY = "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"  # If using OpenAI models
-  # Replace with actual key
+    OPENAI_API_KEY = OPENAI_API_KEY  # Use environment variable
     MIN_CONTEXT_LENGTH = 300  # Minimum characters of context needed
     FALLBACK_PROMPT = """You are a medical expert specializing in Alzheimer's disease. 
 Provide a comprehensive, evidence-based answer to this query: {query}"""
@@ -521,42 +529,42 @@ class VectorDatabase:
         self.chunks_store = {}
         self.figures_store = {}
 
-    # def add_text_chunks(self, chunks: List[ArticleChunk], embeddings: Dict[str, List[float]]):
-    #     """Add text chunks to the database"""
-    #     ids = []
-    #     embedding_vectors = []
-    #     metadatas = []
+    def add_text_chunks(self, chunks: List[ArticleChunk], embeddings: Dict[str, List[float]]):
+        """Add text chunks to the database"""
+        ids = []
+        embedding_vectors = []
+        metadatas = []
 
-    #     for chunk in chunks:
-    #         chunk_id = chunk.chunk_id
-    #         if chunk_id not in embeddings:
-    #             continue
+        for chunk in chunks:
+            chunk_id = chunk.chunk_id
+            if chunk_id not in embeddings:
+                continue
 
-    #         ids.append(chunk_id)
-    #         embedding_vectors.append(embeddings[chunk_id])
-    #         metadatas.append({
-    #             "pmid": chunk.pmid,
-    #             "title": chunk.title,
-    #             "chunk_type": chunk.chunk_type,
-    #             "section": chunk.section if chunk.section else "",
-    #             "figure_id": chunk.figure_id if chunk.figure_id else ""
-    #         })
+            ids.append(chunk_id)
+            embedding_vectors.append(embeddings[chunk_id])
+            metadatas.append({
+                "pmid": chunk.pmid,
+                "title": chunk.title,
+                "chunk_type": chunk.chunk_type,
+                "section": chunk.section if chunk.section else "",
+                "figure_id": chunk.figure_id if chunk.figure_id else ""
+            })
 
-    #         # Store the full chunk data
-    #         self.chunks_store[chunk_id] = chunk
+            # Store the full chunk data
+            self.chunks_store[chunk_id] = chunk
 
-    #     if ids:
-    #         # Add to ChromaDB in batches
-    #         batch_size = 100
-    #         for i in range(0, len(ids), batch_size):
-    #             end = min(i + batch_size, len(ids))
-    #             print('>')
-    #             print('iiiii${i}')
-    #             self.text_collection.add(
-    #                 ids=ids[i:end],
-    #                 embeddings=embedding_vectors[i:end],
-    #                 metadatas=metadatas[i:end]
-    #             )
+        if ids:
+            # Add to ChromaDB in batches
+            batch_size = 100
+            for i in range(0, len(ids), batch_size):
+                end = min(i + batch_size, len(ids))
+                print('>')
+                print('iiiii${i}')
+                self.text_collection.add(
+                    ids=ids[i:end],
+                    embeddings=embedding_vectors[i:end],
+                    metadatas=metadatas[i:end]
+                )
 
     def add_text_chunks(self, chunks: List[ArticleChunk], embeddings: Dict[str, List[float]]):
         """Add text chunks to the database"""
@@ -716,10 +724,7 @@ class AlzheimerRAG:
             do_sample=True,  # Add this to enable temperature
             top_p=0.9        # Add nucleus sampling
         )
-        # if Config.FALLBACK_LLM_API == "meta-llama":
-        #     # self.meta_client = OpenAI(api_key=Config.OPENAI_API_KEY)
-        #     self.meta_client = InferenceClient(model='meta-llama/Meta-Llama-3-8B-Instruct', api_key='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')
-
+        
     def generate(self, query: str, retrieval_results: QueryResult) -> str:
         # Construct context with proper T5 formatting
         context = "\n".join([
@@ -884,36 +889,37 @@ class AlzheimerRAG:
             figures=[retrieved_figures[i] for i in sorted_indices if i >= len(retrieved_chunks)],
             relevance_scores=[relevance_scores[i] for i in sorted_indices]
         )
-#     def generate(self, query: str, retrieval_results: QueryResult) -> str:
-#         """Generate a response based on the query and retrieved information"""
-#         # Construct context from retrieved chunks
-#         context = ""
-#         for chunk in retrieval_results.chunks:
-#             context += f"### Article: {chunk.title} (PMID: {chunk.pmid})\n"
-#             context += f"{chunk.text}\n\n"
 
-#         # Add figure information if available
-#         for figure in retrieval_results.figures:
-#             context += f"### Figure: {figure.get('caption', 'Untitled figure')}\n"
-#             context += f"From article PMID: {figure.get('pmid', 'Unknown')}\n\n"
+    def generate(self, query: str, retrieval_results: QueryResult) -> str:
+        """Generate a response based on the query and retrieved information"""
+        # Construct context from retrieved chunks
+        context = ""
+        for chunk in retrieval_results.chunks:
+            context += f"### Article: {chunk.title} (PMID: {chunk.pmid})\n"
+            context += f"{chunk.text}\n\n"
 
-#         # Construct the prompt
-#         prompt = f"""You are an expert on Alzheimer's disease research. Using the following information from scientific articles, please answer the question.
+        # Add figure information if available
+        for figure in retrieval_results.figures:
+            context += f"### Figure: {figure.get('caption', 'Untitled figure')}\n"
+            context += f"From article PMID: {figure.get('pmid', 'Unknown')}\n\n"
 
-# Information from PubMed articles:
-# {context}
+        # Construct the prompt
+        prompt = f"""You are an expert on Alzheimer's disease research. Using the following information from scientific articles, please answer the question.
 
-# Question: {query}
+Information from PubMed articles:
+{context}
 
-# Please provide a comprehensive and scientifically accurate answer based on the provided information:"""
+Question: {query}
 
-#         # Generate response
-#         response = self.pipeline(prompt)[0]['generated_text']
+Please provide a comprehensive and scientifically accurate answer based on the provided information:"""
 
-#         # Extract the generated part (after the prompt)
-#         generated_text = response[len(prompt):].strip()
+        # Generate response
+        response = self.pipeline(prompt)[0]['generated_text']
 
-#         return generated_text
+        # Extract the generated part (after the prompt)
+        generated_text = response[len(prompt):].strip()
+
+        return generated_text
 # Add to Config class
     def answer(self, query: str, include_images: bool = True) -> Tuple[str, List[Dict[str, Any]]]:
             """Answer a query using RAG with improved validation"""
@@ -922,58 +928,58 @@ class AlzheimerRAG:
                 # retrieval_results = self.retrieve(query, images=include_images)
                 
                 # # Calculate context adequacy with debug logging
-                # total_context = sum(len(chunk.text) for chunk in retrieval_results.chunks)
-                # print(f"Retrieved context length: {total_context} characters")
+                total_context = sum(len(chunk.text) for chunk in retrieval_results.chunks)
+                print(f"Retrieved context length: {total_context} characters")
                 
-                # # Generate base response if any context exists
-                # if retrieval_results.chunks:
-                #     print('retrieveal results')
-                #     response = self.generate(query, retrieval_results)
-                #     if self._validate_response(response, retrieval_results):
-                #         return response, self._process_figures(retrieval_results)
+                # Generate base response if any context exists
+                if retrieval_results.chunks:
+                    print('retrieveal results')
+                    response = self.generate(query, retrieval_results)
+                    if self._validate_response(response, retrieval_results):
+                        return response, self._process_figures(retrieval_results)
                 
-                # # Fallback only if enabled and no context
-                # if Config.FALLBACK_ENABLED:
-                #     print("Falling back to external LLM")
-                prompt = f"""**Take Context from Recent Research on Alzheimers Disease**
+                # Fallback only if enabled and no context
+                if Config.FALLBACK_ENABLED:
+                    print("Falling back to external LLM")
+                    prompt = f"""**Take Context from Recent Research on Alzheimers Disease**
 
 
-                **Patient Question:**
-                {query}
+                    **Patient Question:**
+                    {query}
 
-                Please provide a compassionate, evidence-based response as an Alzheimer's specialist and an Assistant:"""
+                    Please provide a compassionate, evidence-based response as an Alzheimer's specialist and an Assistant:"""
 
-                payload = {
-                            "messages":[
-                                {
-                                    "role":"user",
-                                    "content":prompt
-                                }
-                            ],
-                            "model": "meta-llama/llama-3.1-8b-instruct"
+                    payload = {
+                                "messages":[
+                                    {
+                                        "role":"user",
+                                        "content":prompt
+                                    }
+                                ],
+                                "model": "meta-llama/llama-3.1-8b-instruct"
+                            
+                            }
+                    print('wait')
+                    response = requests.post(
+                                "https://router.huggingface.co/novita/v3/openai/chat/completions",
+                                headers={"Authorization": f"Bearer {HUGGINGFACE_API_KEY}"},
+                                json=payload
+                            )
+                    print(response.status_code)
+                    if response.status_code == 200:
+                                # Clean up any residual instructions from response
+                            print(response)
+                            print(response.json())
+                                            print(response.json["choices"][0]["message"]['content'])
+                        full_response = response.json()
+                        res=full_response['choices'][0]['message']['content']
                         
-                        }
-                print('wait')
-                response = requests.post(
-                            "https://router.huggingface.co/novita/v3/openai/chat/completions",
-                            headers={"Authorization": "Bearer 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"},
-                            json=payload
-                        )
-                # print(response.status_code)
-                # # if response.status_code == 200:
-                #             # Clean up any residual instructions from response
-                # print(response)
-                # print(response.json())
-                                # print(response.json["choices"][0]["message"]['content'])
-                full_response = response.json()
-                res=full_response['choices'][0]['message']['content']
+                                        # Remove any remaining system messages
+                        clean_response = full_response.split("Please provide")[0].strip()
+                        return res,[]
+                    return self._openai_fallback(query), []
                 
-                                # Remove any remaining system messages
-                # clean_response = full_response.split("Please provide")[0].strip()
-                return res,[]
-                # return self._openai_fallback(query), []
-                
-                # return "I couldn't find relevant research. Please try rephrasing your question.", []
+                return "I couldn't find relevant research. Please try rephrasing your question.", []
             
             except Exception as e:
                 print(f"Critical error: {str(e)}")
@@ -1005,8 +1011,8 @@ class AlzheimerRAG:
         """Improved fallback with context-aware prompting"""
         try:
             # Retrieve context from internal knowledge base
-            # general_results = self.retrieve("Alzheimer's disease general information", 3)
-            # context = "\n".join([chunk.text for chunk in general_results.chunks[:3]])
+            general_results = self.retrieve("Alzheimer's disease general information", 3)
+            context = "\n".join([chunk.text for chunk in general_results.chunks[:3]])
 
         # Revised prompt structure
             prompt = f"""**Take Context from Recent Research on Alzheimers Disease**
@@ -1030,7 +1036,7 @@ Answer the question in a clear, natural tone. Do not include titles, headings, o
             print('wait')
             response = requests.post(
             "https://router.huggingface.co/novita/v3/openai/chat/completions",
-            headers={"Authorization": "Bearer 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"},
+            headers={"Authorization": f"Bearer {HUGGINGFACE_API_KEY}"},
             json=payload
         )
             print(response.status_code)
